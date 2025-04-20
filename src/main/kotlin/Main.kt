@@ -83,5 +83,72 @@ fun main(){
     // Mutable map with explicit type declaration
     val juiceMenu: MutableMap<String, Int> = mutableMapOf("apple" to 100, "kiwi" to 190, "orange" to 100)
     println(juiceMenu)
-// {apple=100, kiwi=190, orange=100}
+
+    println("--------------------------------------")
+
+
+    //7
+    // Conditionals
+    //if
+
+    val d: Int
+    val check = true
+
+    if (check) {
+        d = 1
+    } else {
+        d = 2
+    }
+
+    println(d)
+
+    //Ternary operation
+    val a = 1
+    val b = 2
+
+    println(if (a > b) a else b) // Returns a value: 2
+    println("--------------------------------------")
+
+
+    //8 - When Use when when you have a conditional expression with multiple branches.
+    val obj = "Hell0o"
+
+    when (obj) {
+        // Checks whether obj equals to "1"
+        "1" -> println("One")
+        // Checks whether obj equals to "Hello"
+        "Hello" -> println("Greeting")
+        // Default statement
+        else -> println("Unknown")
+    }
+    println("--------------------------------------")
+
+
+    //9
+
+    //This example uses a when expression without a subject to check a chain of Boolean expressions:
+
+    //Option 1
+    val trafficLightState = "Red" // This can be "Green", "Yellow", or "Red"
+
+    val trafficAction = when {
+        trafficLightState == "Green" -> "Go"
+        trafficLightState == "Yellow" -> "Slow down"
+        trafficLightState == "Red" -> "Stop"
+        else -> "Malfunction"
+    }
+
+    println(trafficAction)
+
+    //Option 2
+    val trafficLightState2 = "Red" // This can be "Green", "Yellow", or "Red"
+
+    val trafficAction2 = when (trafficLightState2) {
+        "Green" -> "Go"
+        "Yellow" -> "Slow down"
+        "Red" -> "Stop"
+        else -> "Malfunction"
+    }
+
+    println(trafficAction)
 }
