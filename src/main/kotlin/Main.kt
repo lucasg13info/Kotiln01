@@ -61,4 +61,27 @@ fun main(){
     shapes2.remove("pentagon")
     println(shapes2)
 
+    println("--------------------------------------------------------")
+
+
+    //5 - sets
+    //Sets: Whereas lists are ordered and allow duplicate items, sets are unordered and only store unique items.
+    val fruit: MutableSet<String> = mutableSetOf("apple", "banana", "cherry", "cherry")
+
+    //will not show duplicated data
+    println(fruit)
+
+    println("--------------------------------------------------------------")
+
+
+    //6 Map - Maps store items as key-value pairs. You access the value by referencing the key. You can imagine a map like a food menu. You can find the price (value), by finding the food (key) you want to eat. Maps are useful if you want to look up a value without using a numbered index, like in a list
+
+    // Read-only map
+    val readOnlyJuiceMenu = mapOf("apple" to 100, "kiwi" to 190, "orange" to 100)
+    println(readOnlyJuiceMenu)
+
+    // Mutable map with explicit type declaration
+    val juiceMenu: MutableMap<String, Int> = mutableMapOf("apple" to 100, "kiwi" to 190, "orange" to 100)
+    println(juiceMenu)
+// {apple=100, kiwi=190, orange=100}
 }
